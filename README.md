@@ -3,7 +3,7 @@
 ## Installation
 Clone the repo:
 ```bash
-git clone --recursive https://github.com/Stable-X/Stable3DGen.git
+git clone --recursive https://github.com/ig-shadow-walker/3DHiGen.git
 cd Stable3DGen
 ```
 
@@ -13,11 +13,11 @@ conda create -n stablex python=3.10
 conda activate stablex
 ```
 
-Install dependencies:
+Install dependencies (CUDA 12.4 / cu124; replace `cu124` with your CUDA version if different):
 ```bash
-# pytorch (select correct CUDA version)
-pip install torch==2.4.0 torchvision==0.19.0 --index-url https://download.pytorch.org/whl/{your-cuda-version}
-pip install spconv-cu{your-cuda-version}==2.3.6 xformers==0.0.27.post2
+# PyTorch with CUDA 12.4
+pip install torch==2.4.0 torchvision==0.19.0 --index-url https://download.pytorch.org/whl/cu124
+pip install spconv-cu124==2.3.8 xformers==0.0.27.post2
 # other dependencies
 pip install -r requirements.txt
 ```
